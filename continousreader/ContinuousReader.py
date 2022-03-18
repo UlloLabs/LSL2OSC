@@ -210,10 +210,10 @@ class ContinuousReader():
         """
         self._updateStreams()
 
-        new_sample = None
-        new_timestamp = None
         # loop all current streams
         for k in self._streams:
+            new_sample = None
+            new_timestamp = None
             s = self._streams[k]
             inlet = s['inlet']
             try:
