@@ -162,7 +162,7 @@ class ContinuousReader():
     def _simple_callmeback(self, callback_fun, pull_last=False):
         """
         Here only process the first stream matching predicate
-        callback_fun: function to call for each new sample. Well get as argument a tuplet (sample, timestamp, name, type, hostname, uid)
+        callback_fun: function to call for each new sample. Well get as argument a tuplet (sample, timestamp, name, type, hostname, uid, sampling rate, data format)
         pull_last: if True, only process last value, skipping everything that occurred since last call
         """
         sample = None
@@ -205,6 +205,7 @@ class ContinuousReader():
     def _multi_callmeback(self, callback_fun, pull_last=False):
         """
         Here we fetch data from all streams matching pred.
+        callback_fun: function to call for each new sample. Well get as argument a tuplet (sample, timestamp, name, type, hostname, uid, sampling rate, data format)
         pull_last: for each stream discard all samples but the last
         """
         self._updateStreams()
@@ -242,6 +243,7 @@ class ContinuousReader():
         """
         Run callback_fun for each sample of each captured stream. Compared to read() no value is returned, and each stream / sample is processed before return.
         WARNING: use either read() or callmeback(), a sample process in one won't appear in the other.
+        callback_fun: function to call for each new sample. Well get as argument a tuplet (sample, timestamp, name, type, hostname, uid, sampling rate, data format)
         pull_last: if True, will retrieve and process only the last sample (if any) of each captured stream.
         """
         if self._fetch_all:
