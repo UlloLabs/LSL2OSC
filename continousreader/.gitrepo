@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@gitlab.com:ullo/communication/continousreader.git
 	branch = master
-	commit = 0a008f6ffcd2e0a01c7550d7ab946166e5043c6a
-	parent = 571da265f1fb0e3d8c28a99be7b84f398b676f6f
+	commit = 6096cabe093e45b03b38ec68c97240e10ad6564f
+	parent = 4965601b8f7b6ff05cd0986db128a3799ed3cb6e
 	method = merge
 	cmdver = 0.4.3
