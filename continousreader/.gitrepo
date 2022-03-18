@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@gitlab.com:ullo/communication/continousreader.git
+	branch = master
+	commit = dd7ff2ec8ecefc1c48025b2ee36453cef3b9d6c1
+	parent = 0c064ceb5cc2194723850384c9bc4ade942b23b2
+	method = merge
+	cmdver = 0.4.3
