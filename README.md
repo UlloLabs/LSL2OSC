@@ -18,3 +18,9 @@ I experienced some issues with LSL ContinuousResolver with an empty predicate (p
 # Dev
 
 This repository uses git subrepo (https://github.com/ingydotnet/git-subrepo) to sync code (e.g. with the ContinuousReader wrapper).
+
+# Changelog
+
+## v0.1.0 (2022-12-08)
+
+- first public release
